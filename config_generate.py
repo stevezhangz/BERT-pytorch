@@ -1,18 +1,19 @@
 import configparser
 
 # param
-maxlen = "150"
-batch_size = "6"
+maxlen = "120"
+batch_size = "12"
 max_pred = "5"
 n_layers = "6"
 n_heads = "12"
-d_model = "768"
-d_ff = "768*4"
-d_k = d_v = "64"
+d_model = "1000"
+d_ff = "1000*4"
+d_k = "100"
+d_v = "100"
 n_segments = "2"
-random_seed="9527"
-learning_rate="0.0001"
-epoches="250"
+seed = "9527"
+lr = "0.0001"
+epc = "250"
 drop="0.5"
 
 #dir
@@ -39,9 +40,9 @@ conf.set("hyper_parameters","d_ff",d_ff)
 conf.set("hyper_parameters","d_k",d_k)
 conf.set("hyper_parameters","d_v",d_v )
 conf.set("hyper_parameters","n_segments",n_segments)
-conf.set("hyper_parameters","seed",random_seed)
-conf.set("hyper_parameters","lr",learning_rate)
-conf.set("hyper_parameters","epc",epoches)
+conf.set("hyper_parameters","seed",seed)
+conf.set("hyper_parameters","lr",lr)
+conf.set("hyper_parameters","epc",epc)
 conf.set("hyper_parameters","drop",drop)
 
 conf.add_section("file_dir")
