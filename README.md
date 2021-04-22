@@ -13,7 +13,7 @@ Bash code(preparation)
     cd BERT-pytorch
     pip install -r requirements.txt 
     
-I prepare two demos for model training(poem and a conversation)
+I prepare a demo for model training(your can select poem or conversation in the source code)
 run train_demo.py to train
   
     ipython3 train_demo.py
