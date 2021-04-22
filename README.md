@@ -72,8 +72,8 @@ Modify super parameters directly in “Config.cfg”
 Because of time, I can't spend time to train the model. You are welcome to use my model for training and contribute pre train weight to this project
 
 # About me
-author={
-  E-maile:stevezhangz@163.com
+author={        
+  E-mail:stevezhangz@163.com        
 }
 
 # Acknowledgement
