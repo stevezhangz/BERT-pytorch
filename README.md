@@ -1,6 +1,8 @@
 # BERT-pytorch
 
-Repeted by myself, without pre-train.
+Repeted by pytorch, without pre-train.  
+Now, could be trained by mask word2idx.      
+And, I am foucsing on the conversation training.    
 
 # How to use
 
@@ -77,7 +79,7 @@ author={
 }
 
 # Acknowledgement
-Acknowledgement for the open-source [poem dataset](https://github.com/chinese-poetry/chinese-poetry)
+Acknowledgement for the open-source [poem dataset](https://github.com/chinese-poetry/chinese-poetry) and a little bit codes of this [project named nlp-tutorial](https://codechina.csdn.net/mirrors/wmathor/nlp-tutorial/-/tree/master/5-2.BERT) for inspiration.
 
 
     
