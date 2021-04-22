@@ -20,7 +20,7 @@ run train_demo.py to train
 
 except that, you have to learn about how to run it on your dataset
 
-  - first use "general_transform_text2list" in data_process.py to transform txt or json file to list which defined as "[s1,s2,s3,s4.....]"
+  - first use "general_transform_text2list" in data_process.py to transform txt or json file to list which could be defined as "[s1,s2,s3,s4.....]"
   - then use "generate_vocab_normalway" in data_process.py to transform list file to "sentences, id_sentence, idx2word, word2idx, vocab_size"
   - Last but not least, use "creat_batch" in data_process.py to transform "sentences, id_sentence, idx2word, word2idx, vocab_size" to a batch.
   - finally using dataloder in pytorch to load data.
