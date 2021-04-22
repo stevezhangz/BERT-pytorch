@@ -13,7 +13,7 @@ n_segments = "2"
 random_seed="9527"
 learning_rate="0.0001"
 epoches="250"
-
+drop="0.5"
 
 #dir
 data_dir="./data"
@@ -42,6 +42,7 @@ conf.set("hyper_parameters","n_segments",n_segments)
 conf.set("hyper_parameters","seed",random_seed)
 conf.set("hyper_parameters","lr",learning_rate)
 conf.set("hyper_parameters","epc",epoches)
+conf.set("hyper_parameters","drop",drop)
 
 conf.add_section("file_dir")
 conf.set("file_dir","data",data_dir)
