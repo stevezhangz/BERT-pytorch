@@ -54,7 +54,7 @@ for example:
             model.to(device)
             criterion = nn.CrossEntropyLoss()
             optimizer = optim.Adadelta(model.parameters(), lr=lr)
-            model.Train_for_mask_guess(epoches=epoches,
+            model.Train(epoches=epoches,
                         train_data_loader=loader,
                         optimizer=optimizer,
                         criterion=criterion,
