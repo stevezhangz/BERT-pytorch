@@ -1,8 +1,16 @@
 # BERT-pytorch
 
-Repeted by pytorch, without pre-train.  
-Now, could be trained by mask word2idx.      
-And, I am foucsing on the conversation training.    
+Introduction:
+
+This mechine could be trained by "train_demo.py"    
+  And there are mainly two datasets demo, one is a json file about poem, another is a conversation demo created by myself.    
+  However I don't recommand to use those demo_datas to train, I prefer use formal datasets.   
+
+Funtune method could be found in "Bert_finetune.py", funtune of BERT mainly include two examples.   
+  First is the word classify prediction, could be found in ["bert_for_word_classify.py"](https://github.com/stevezhangz/BERT-pytorch/blob/main/bert_for_word_classify.py)    
+  Second is the sentences classify prediction, could be found in [" bert_for_sentence_classify.py"](https://github.com/stevezhangz/BERT-pytorch/blob/main/bert_for_sentence_classify.py)   
+
+Next, I will enrich the language generation as well as conversation process.  
 
 # How to use
 
