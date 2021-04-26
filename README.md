@@ -27,6 +27,7 @@ Next, I will enrich the language generation as well as conversation process.
 ### for win users, if u utlize the python IDEs such as pycharm, please find terminals of pycharm, and input the bash codes as shown in fellows:
 
     pip install git
+    conda install ipython3
     git clone https://github.com/stevezhangz/BERT-pytorch.git
     cd BERT-pytorch
     pip install -r requirements.txt 
@@ -34,6 +35,7 @@ Next, I will enrich the language generation as well as conversation process.
 part of you may use anaconda3, so you have to load "anaconda3 prompt" and input fellow bash codes：
 
 	conda install pip
+	conda install ipython3
     conda install git
     git clone https://github.com/stevezhangz/BERT-pytorch.git
     cd BERT-pytorch
@@ -111,11 +113,11 @@ Next, we will enrich about the language generation and conversation.
 
 - sentence classification:
 
-    ipython3  bert_for_sentence_classify.py
+      ipython3  bert_for_sentence_classify.py
     
 - word prediction:
 
-    ipython3  bert_for_word_classify.py
+      ipython3  bert_for_word_classify.py
 
 
 # Pretrain
