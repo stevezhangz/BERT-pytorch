@@ -14,7 +14,10 @@ Next, I will enrich the language generation as well as conversation process.
 
 # How to use
 
-### Bash code(preparation)
+# How to use
+
+## preparation:
+### if your develop env is unbuntu, plz load the terminal, and input the fellow bash codes.
 
     sudo apt-get install ipython3
     sudo apt-get install pip
@@ -22,6 +25,33 @@ Next, I will enrich the language generation as well as conversation process.
     git clone https://github.com/stevezhangz/BERT-pytorch.git
     cd BERT-pytorch
     pip install -r requirements.txt 
+   
+### for win users, if u utlize the python IDEs such as pycharm, please find terminals of pycharm, and input the bash codes as shown in fellows:
+
+    pip install git
+    git clone https://github.com/stevezhangz/BERT-pytorch.git
+    cd BERT-pytorch
+    pip install -r requirements.txt 
+
+part of you may use anaconda3, so you have to load "anaconda3 prompt" and input fellow bash codes：
+
+	conda install pip
+    conda install git
+    git clone https://github.com/stevezhangz/BERT-pytorch.git
+    cd BERT-pytorch
+    pip install -r requirements.txt 
+    
+I prepare a demo for model training(your can select poem or conversation in the source code)    
+run train_demo.py to train
+  
+    ipython3 train_demo.py
+
+### except that, you have to learn about how to run it on your dataset
+
+  - first use "general_transform_text2list" in data_process.py to transform txt or json file to list which could be defined as "[s1,s2,s3,s4.....]"
+  - then use "generate_vocab_normalway" in data_process.py to transform list file to "sentences, id_sentence, idx2word, word2idx, vocab_size"
+  - Last but not least, use "creat_batch" in data_process.py to transform "sentences, id_sentence, idx2word, word2idx, vocab_size" to a batch.
+  - finally using dataloder in pytorch to load data.
     
 I prepare a demo for model training(your can select poem or conversation in the source code)    
 run train_demo.py to train
