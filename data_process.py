@@ -192,7 +192,36 @@ def generate_vocab_from_poem_chuci(poem_dir,map_dir):
                     json.dump(map_file,f)
     return sentences,id_sentence,idx2word,word2idx,vocab_size
 
+def creat_batch_for_wordpre(
+                batch_size,
+                word2idx,
+                token_list,
+                maxlen):
+    batch=[]
+    cnt=0
+    if batch_size>len(token_list):
+        batch_size=len(token_list)
+    while(cnt<batch_size):
+        s=choice(token_list)
+        In_id=[word2idx['[CLS]']]+s
+        if len(In_id)<maxlen:
+            n_pad=maxlen-len(In_id)
+            In_id.extend([0]*n_pad)
+        batch.append(In_id)
+        cnt+=1
+    return batch
 
+class word_pre_load(Data.Dataset):
+    def __init__(self, batch):
+        input_ids= torch.LongTensor(batch)
+        self.input_ids = input_ids
+
+
+    def __len__(self):
+        return len(self.input_ids)
+
+    def __getitem__(self, idx):
+        return self.input_ids[idx]
 def creat_batch(batch_size,
                 max_pred,
                 maxlen,
