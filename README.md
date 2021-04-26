@@ -1,20 +1,20 @@
 # BERT-pytorch
 
-Introduction:
+### Introduction:
 
 This mechine could be trained by "train_demo.py"    
   And there are mainly two datasets demo, one is a json file about poem, another is a conversation demo created by myself.    
   However I don't recommand to use those demo_datas to train, I prefer use formal datasets.   
 
-Funtune method could be found in "Bert_finetune.py", funtune of BERT mainly include two examples.   
-  First is the word classify prediction, could be found in ["bert_for_word_classify.py"](https://github.com/stevezhangz/BERT-pytorch/blob/main/bert_for_word_classify.py)    
-  Second is the sentences classify prediction, could be found in [" bert_for_sentence_classify.py"](https://github.com/stevezhangz/BERT-pytorch/blob/main/bert_for_sentence_classify.py)   
+Fine-tune method could be found in "Bert_finetune.py", Fine-tune of BERT mainly include two examples.   
+  First is the word classify prediction, could be found in ["bert_for_word_classify.py"](https://codechina.csdn.net/captainAAAjohn/BERT-pytorch/-/blob/main/bert_for_word_classify.py)    
+  Second is the sentences classify prediction, could be found in [" bert_for_sentence_classify.py"](https://codechina.csdn.net/captainAAAjohn/BERT-pytorch/-/blob/main/bert_for_sentence_classify.py)   
 
-Next, I will enrich the language generation as well as conversation process.  
+Next, I will enrich the language generation as well as conversation process.    
 
 # How to use
 
-Bash code(preparation)
+### Bash code(preparation)
 
     sudo apt-get install ipython3
     sudo apt-get install pip
@@ -28,14 +28,14 @@ run train_demo.py to train
   
     ipython3 train_demo.py
 
-except that, you have to learn about how to run it on your dataset
+### except that, you have to learn about how to run it on your dataset
 
   - first use "general_transform_text2list" in data_process.py to transform txt or json file to list which could be defined as "[s1,s2,s3,s4.....]"
   - then use "generate_vocab_normalway" in data_process.py to transform list file to "sentences, id_sentence, idx2word, word2idx, vocab_size"
   - Last but not least, use "creat_batch" in data_process.py to transform "sentences, id_sentence, idx2word, word2idx, vocab_size" to a batch.
   - finally using dataloder in pytorch to load data.
 
-for example:
+### for example:
 
     np.random.seed(random_seed)
     #json2list=general_transform_text2list("data/demo.txt",type="txt")
@@ -77,18 +77,19 @@ for example:
 # How to config
 Modify super parameters directly in “Config.cfg”
 
-# About fintune
-To identify the trained bert has learned something from the training dataset, bert fintune on the other dataset which various from the original one is necessary. We provide two examples, first one is about the prediction of specific sentence classification(there are no meanings about the classification, because bert trainning process is a self-learning process without supervise information about classification of per sentence), another one is about the word prediction of a specific sentence.
+# About fine-tune
+To identify the trained bert has learned something from the training dataset, bert fine-tune on the other dataset which various from the original one is necessary. We provide two examples, first one is about the prediction of specific sentence classification(there are no meanings about the classification, because bert trainning process is a self-learning process without supervise infomation about classification of per sentence), another one is about the word prediction of a specific sentence.
 Next, we will enrich about the language generation and conversation.
 
 - sentence classification:
 
-      ipython3  bert_for_sentence_classify.py
+    ipython3  bert_for_sentence_classify.py
     
 - word prediction:
 
-       ipython3  bert_for_word_classify.py
-    
+    ipython3  bert_for_word_classify.py
+
+
 # Pretrain
 Because of time, I can't spend time to train the model. You are welcome to use my model for training and contribute pre train weight to this project
 
