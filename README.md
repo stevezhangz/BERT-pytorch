@@ -14,8 +14,6 @@ Next, I will enrich the language generation as well as conversation process.
 
 # How to use
 
-# How to use
-
 ## preparation:
 ### if your develop env is unbuntu, plz load the terminal, and input the fellow bash codes.
 
