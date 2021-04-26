@@ -77,6 +77,18 @@ for example:
 # How to config
 Modify super parameters directly in “Config.cfg”
 
+# About fintune
+To identify the trained bert has learned something from the training dataset, bert fintune on the other dataset which various from the original one is necessary. We provide two examples, first one is about the prediction of specific sentence classification(there are no meanings about the classification, because bert trainning process is a self-learning process without supervise information about classification of per sentence), another one is about the word prediction of a specific sentence.
+Next, we will enrich about the language generation and conversation.
+
+- sentence classification:
+
+    ipython3  bert_for_sentence_classify.py
+    
+- word prediction:
+
+    ipython3  bert_for_word_classify.py
+    
 # Pretrain
 Because of time, I can't spend time to train the model. You are welcome to use my model for training and contribute pre train weight to this project
 
